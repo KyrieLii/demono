@@ -16,7 +16,7 @@
    * path segment in the "$schema" field for all your Rush config files.  This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.82.1",
+  "rushVersion": "5.83.4",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -116,34 +116,34 @@
    * The approvals are tracked in two config files "browser-approved-packages.json"
    * and "nonbrowser-approved-packages.json".  See the Rush documentation for details.
    */
-  "approvedPackagesPolicy": {
-    /**
-     * The review categories allow you to say for example "This library is approved for usage
-     * in prototypes, but not in production code."
-     *
-     * Each project can be associated with one review category, by assigning the "reviewCategory" field
-     * in the "projects" section of rush.json.  The approval is then recorded in the files
-     * "common/config/rush/browser-approved-packages.json" and "nonbrowser-approved-packages.json"
-     * which are automatically generated during "rush update".
-     *
-     * Designate categories with whatever granularity is appropriate for your review process,
-     * or you could just have a single category called "default".
-     */
-    "reviewCategories": [
-      // Some example categories:
-      "production", // projects that ship to production
-      "tools", // non-shipping projects that are part of the developer toolchain
-      "prototypes" // experiments that should mostly be ignored by the review process
-    ]
+  //   "approvedPackagesPolicy": {
+  //     /**
+  //      * The review categories allow you to say for example "This library is approved for usage
+  //      * in prototypes, but not in production code."
+  //      *
+  //      * Each project can be associated with one review category, by assigning the "reviewCategory" field
+  //      * in the "projects" section of rush.json.  The approval is then recorded in the files
+  //      * "common/config/rush/browser-approved-packages.json" and "nonbrowser-approved-packages.json"
+  //      * which are automatically generated during "rush update".
+  //      *
+  //      * Designate categories with whatever granularity is appropriate for your review process,
+  //      * or you could just have a single category called "default".
+  //      */
+  //     "reviewCategories": [
+  //       // Some example categories:
+  //       "production", // projects that ship to production
+  //       "tools", // non-shipping projects that are part of the developer toolchain
+  //       "prototypes" // experiments that should mostly be ignored by the review process
+  //     ]
 
-    /**
-     * A list of NPM package scopes that will be excluded from review.
-     * We recommend to exclude TypeScript typings (the "@types" scope), because
-     * if the underlying package was already approved, this would imply that the typings
-     * are also approved.
-     */
-    // "ignoredNpmScopes": ["@types"]
-  },
+  //     /**
+  //      * A list of NPM package scopes that will be excluded from review.
+  //      * We recommend to exclude TypeScript typings (the "@types" scope), because
+  //      * if the underlying package was already approved, this would imply that the typings
+  //      * are also approved.
+  //      */
+  //     // "ignoredNpmScopes": ["@types"]
+  //   },
 
   /**
    * If you use Git as your version control system, this section has some additional
@@ -161,42 +161,38 @@
      * IMPORTANT: Because these are regular expressions encoded as JSON string literals,
      * RegExp escapes need two backslashes, and ordinary periods should be "\\.".
      */
-    "allowedEmailRegExps": [
-      "[^@]+@users\\.noreply\\.github\\.com",
-      "rush-bot@example\\.org"
-    ],
-
-    /**
-     * When Rush reports that the address is malformed, the notice can include an example
-     * of a recommended email.  Make sure it conforms to one of the allowedEmailRegExps
-     * expressions.
-     */
-    "sampleEmail": "example@users.noreply.github.com",
-
-    /**
-     * The commit message to use when committing changes during 'rush publish'.
-     *
-     * For example, if you want to prevent these commits from triggering a CI build,
-     * you might configure your system's trigger to look for a special string such as "[skip-ci]"
-     * in the commit message, and then customize Rush's message to contain that string.
-     */
-    "versionBumpCommitMessage": "Bump versions [skip ci]",
-
-    /**
-     * The commit message to use when committing changes during 'rush version'.
-     *
-     * For example, if you want to prevent these commits from triggering a CI build,
-     * you might configure your system's trigger to look for a special string such as "[skip-ci]"
-     * in the commit message, and then customize Rush's message to contain that string.
-     */
-    "changeLogUpdateCommitMessage": "Update changelogs [skip ci]",
-
-    /**
-     * The commit message to use when commiting changefiles during 'rush change --commit'
-     *
-     * If no commit message is set it will default to 'Rush change'
-     */
-    "changefilesCommitMessage": "Rush change"
+    // "allowedEmailRegExps": [
+    //   "[^@]+@users\\.noreply\\.github\\.com",
+    //   "rush-bot@example\\.org"
+    // ],
+    // /**
+    //  * When Rush reports that the address is malformed, the notice can include an example
+    //  * of a recommended email.  Make sure it conforms to one of the allowedEmailRegExps
+    //  * expressions.
+    //  */
+    // "sampleEmail": "example@users.noreply.github.com",
+    // /**
+    //  * The commit message to use when committing changes during 'rush publish'.
+    //  *
+    //  * For example, if you want to prevent these commits from triggering a CI build,
+    //  * you might configure your system's trigger to look for a special string such as "[skip-ci]"
+    //  * in the commit message, and then customize Rush's message to contain that string.
+    //  */
+    // "versionBumpCommitMessage": "Bump versions [skip ci]",
+    // /**
+    //  * The commit message to use when committing changes during 'rush version'.
+    //  *
+    //  * For example, if you want to prevent these commits from triggering a CI build,
+    //  * you might configure your system's trigger to look for a special string such as "[skip-ci]"
+    //  * in the commit message, and then customize Rush's message to contain that string.
+    //  */
+    // "changeLogUpdateCommitMessage": "Update changelogs [skip ci]",
+    // /**
+    //  * The commit message to use when commiting changefiles during 'rush change --commit'
+    //  *
+    //  * If no commit message is set it will default to 'Rush change'
+    //  */
+    // "changefilesCommitMessage": "Rush change"
   },
 
   "repository": {
@@ -325,14 +321,12 @@
     {
       "packageName": "react-app",
       "projectFolder": "apps/react-app",
-      "shouldPublish": false,
-      "reviewCategory": "prototypes"
+      "shouldPublish": false
     },
     {
       "packageName": "vue-app",
       "projectFolder": "apps/vue-app",
-      "shouldPublish": false,
-      "reviewCategory": "prototypes"
+      "shouldPublish": false
     }
   ]
 }

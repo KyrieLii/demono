@@ -327,6 +327,11 @@
       "packageName": "vue-app",
       "projectFolder": "apps/vue-app",
       "shouldPublish": false
+    },
+    {
+      "packageName": "astro-app",
+      "projectFolder": "apps/astro-app",
+      "shouldPublish": false
     }
   ]
 }

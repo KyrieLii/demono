@@ -332,6 +332,11 @@
       "packageName": "astro-app",
       "projectFolder": "apps/astro-app",
       "shouldPublish": false
+    },
+    {
+      "packageName": "nest-demo",
+      "projectFolder": "server/nest-demo",
+      "shouldPublish": false
     }
   ]
 }

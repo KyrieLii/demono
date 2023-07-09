@@ -347,6 +347,11 @@
       "packageName": "webpack-react-app",
       "projectFolder": "apps/webpack-react-app",
       "shouldPublish": false
+    },
+    {
+      "packageName": "rspack-app",
+      "projectFolder": "apps/rspack-app",
+      "shouldPublish": false
     }
   ]
 }

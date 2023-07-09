@@ -334,18 +334,8 @@
       "shouldPublish": false
     },
     {
-      "packageName": "nest-demo",
-      "projectFolder": "server/nest-demo",
-      "shouldPublish": false
-    },
-    {
-      "packageName": "cra-app",
-      "projectFolder": "apps/cra-app",
-      "shouldPublish": false
-    },
-    {
-      "packageName": "webpack-react-app",
-      "projectFolder": "apps/webpack-react-app",
+      "packageName": "nestjs-app",
+      "projectFolder": "server/nestjs-app",
       "shouldPublish": false
     },
     {

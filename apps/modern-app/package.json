@@ -9,19 +9,10 @@
     "serve": "modern serve",
     "new": "modern new",
     "lint": "modern lint",
-    "prepare": "husky install",
     "upgrade": "modern upgrade"
   },
   "engines": {
     "node": ">=16.18.1"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
-    ],
-    "*.{js,jsx,mjs,mjsx,cjs,cjsx}": [
-      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
-    ]
   },
   "eslintIgnore": [
     "node_modules/",
@@ -34,12 +25,6 @@
   },
   "devDependencies": {
     "@modern-js/app-tools": "2.25.2",
-    "@modern-js/eslint-config": "2.25.2",
-    "@modern-js/tsconfig": "2.25.2",
-    "@modern-js-app/eslint-config": "2.25.2",
-    "lint-staged": "~13.1.0",
-    "prettier": "~2.8.1",
-    "husky": "~8.0.1",
     "rimraf": "~3.0.2",
     "typescript": "~5.0.4",
     "@types/jest": "~29.2.4",

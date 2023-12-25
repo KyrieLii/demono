@@ -2,9 +2,6 @@ import React from "react";
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import mmm from './mmm';
-
-console.log(mmm);
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,4 +29,4 @@ function App() {
   );
 }
 
-export default compose(withA)(App);
+export default App;

@@ -344,6 +344,11 @@
       "shouldPublish": false
     },
     {
+      "packageName": "modern-app",
+      "projectFolder": "apps/modern-app",
+      "shouldPublish": false
+    },
+    {
       "packageName": "custom-utils",
       "projectFolder": "packages/utils",
       "shouldPublish": false

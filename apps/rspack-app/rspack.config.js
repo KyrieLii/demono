@@ -1,33 +1,16 @@
-const { default: HtmlPlugin } = require("@rspack/plugin-html");
+const { rspack } = require("@rspack/core");
 /**
  * @type {import('@rspack/cli').Configuration}
  */
 module.exports = {
   context: __dirname,
-  mode: "development",
+  mode: process.env.NODE_ENV ?? "development",
   entry: {
     main: "./src/main.jsx",
   },
-  builtins: {},
   plugins: [
-    new HtmlPlugin({
+    new rspack.HtmlRspackPlugin({
       template: "./index.html",
-      templateParameters: (compilation) => {
-        console.log(
-          "compilation.namedChunkGroups",
-          compilation.namedChunkGroups
-        );
-        console.log(
-          "compilation.getStats().toJson().namedChunkGroups",
-          JSON.stringify(
-            compilation.getStats().toJson().namedChunkGroups,
-            null,
-            2
-          )
-        );
-
-        return {};
-      },
     }),
   ],
   module: {

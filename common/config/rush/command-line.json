@@ -80,6 +80,9 @@
        * the custom command name.  To disable this check, set "ignoreMissingScript" to true;
        * projects with a missing definition will be skipped.
        */
+      /**
+       * https://github.com/microsoft/rushstack/issues/1877
+       */
       "ignoreMissingScript": true,
 
       /**

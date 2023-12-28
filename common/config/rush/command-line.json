@@ -11,6 +11,9 @@
    * "rush my-global-command --help".
    */
   "commands": [
+    /**
+     * https://github.com/microsoft/rushstack/issues/1329
+     */
     {
       "commandKind": "bulk",
       "name": "build",

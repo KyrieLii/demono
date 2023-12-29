@@ -91,6 +91,31 @@ importers:
         specifier: 4.4.2
         version: 4.4.2
 
+  ../../apps/rsbuild-react:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@rsbuild/core':
+        specifier: ^0.2.13
+        version: 0.2.13
+      '@rsbuild/plugin-react':
+        specifier: ^0.2.13
+        version: 0.2.13
+      '@types/react':
+        specifier: ^18
+        version: 18.0.26
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.0.10
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   ../../apps/rspack-app:
     dependencies:
       lodash:
@@ -120,7 +145,7 @@ importers:
         version: 0.4.5
       '@rspack/plugin-react-refresh':
         specifier: ~0.4.5
-        version: 0.4.5
+        version: 0.4.5(react-refresh@0.14.0)
       '@svgr/webpack':
         specifier: ^6.5.1
         version: 6.5.1
@@ -4922,6 +4947,35 @@ packages:
     dependencies:
       web-streams-polyfill: 3.2.1
 
+  /@rsbuild/core@0.2.13:
+    resolution: {integrity: sha512-KQOJ18dm7N7Rcqxp7A5Q6q275ID7houDf8ZKdPTsYHBjWEJix/e+MFy9dT9p2sHPbXWQ1pVf30vJlRw6cHc2Hw==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      '@rsbuild/shared': 0.2.13
+      '@rspack/core': 0.4.5
+      core-js: 3.32.2
+      html-webpack-plugin: /html-rspack-plugin@5.5.7
+      postcss: 8.4.31
+    dev: true
+
+  /@rsbuild/plugin-react@0.2.13:
+    resolution: {integrity: sha512-Ut8XegbgHp8YGoHk9EeJ97++rKtmkogJRQIxTOkHBRCP9BU/RtS8IayficQby+/fOM6ZSnzo9UcaGLRj0Vf7lA==}
+    dependencies:
+      '@rsbuild/shared': 0.2.13
+      '@rspack/plugin-react-refresh': 0.4.5(react-refresh@0.14.0)
+      react-refresh: 0.14.0
+    dev: true
+
+  /@rsbuild/shared@0.2.13:
+    resolution: {integrity: sha512-Ctr1ExDqh7Q2VlinzZ9gBrswWkEztd1MUPH94Si9xG+P6j+mwG1jv33FAMn9vX/e+JtvmhTxy69B855hrFAW4g==}
+    dependencies:
+      '@rspack/core': 0.4.5
+      caniuse-lite: 1.0.30001572
+      lodash: 4.17.21
+      postcss: 8.4.31
+    dev: true
+
   /@rspack/binding-darwin-arm64@0.2.5:
     resolution: {integrity: sha512-8JfrzDqokCqHhHWzwERA0m5riF/ZsFOCbsmC2KmnFnI5NSdZOu4ZlxyJ9miD9qsU/YaWzKMNZZc+DZppcMSKNQ==}
     cpu: [arm64]
@@ -5200,7 +5254,7 @@ packages:
       '@rspack/core': '*'
     dependencies:
       '@rspack/core': 0.4.5
-      '@rspack/plugin-react-refresh': 0.4.5
+      '@rspack/plugin-react-refresh': 0.4.5(react-refresh@0.14.0)
       chokidar: 3.5.3
       connect-history-api-fallback: 2.0.0
       express: 4.18.1
@@ -5239,13 +5293,15 @@ packages:
       tapable: 2.2.1
     dev: true
 
-  /@rspack/plugin-react-refresh@0.4.5:
+  /@rspack/plugin-react-refresh@0.4.5(react-refresh@0.14.0):
     resolution: {integrity: sha512-VGauW5J2r8zX+y2DlX1oPHPlruEHM9O+8faLfWWOJF0Gylra+WGD9STWbR+XcYJsCnDzbTzIL5gOq4cQbINcYg==}
     peerDependencies:
       react-refresh: '>=0.10.0 <1.0.0'
     peerDependenciesMeta:
       react-refresh:
         optional: true
+    dependencies:
+      react-refresh: 0.14.0
     dev: true
 
   /@sinclair/typebox@0.25.21:
@@ -7387,6 +7443,10 @@ packages:
   /caniuse-lite@1.0.30001514:
     resolution: {integrity: sha512-ENcIpYBmwAAOm/V2cXgM7rZUrKKaqisZl4ZAI520FIkqGXUxJjmaIssbRW5HVVR5tyV6ygTLIm15aU8LUmQSaQ==}
 
+  /caniuse-lite@1.0.30001572:
+    resolution: {integrity: sha512-1Pbh5FLmn5y4+QhNyJE9j3/7dK44dGB83/ZMjv/qJk86TvDbjk0LosiZo0i0WB0Vx607qMX9jYrn1VLHCkN4rw==}
+    dev: true
+
   /ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
     dev: false
@@ -7802,6 +7862,11 @@ packages:
 
   /core-js@3.30.2:
     resolution: {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
+    requiresBuild: true
+    dev: true
+
+  /core-js@3.32.2:
+    resolution: {integrity: sha512-pxXSw1mYZPDGvTQqEc5vgIb83jGQKFGYWY76z4a7weZXUolw3G+OvpZqSRcfYOoOVUQJYEPsWeQK8pKEnUtWxQ==}
     requiresBuild: true
     dev: true
 
@@ -10117,6 +10182,14 @@ packages:
       param-case: 3.0.4
       relateurl: 0.2.7
       terser: 5.18.2
+    dev: true
+
+  /html-rspack-plugin@5.5.7:
+    resolution: {integrity: sha512-7dNAURj9XBHWoYg59F8VU6hT7J7w+od4Lr5hc/rrgN6sy6QfqVpoPqW9Qw4IGFOgit8Pul7iQp1yysBSIhOlsg==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      lodash: 4.17.21
+      tapable: 2.2.1
     dev: true
 
   /html-void-elements@2.0.1:
@@ -13323,6 +13396,15 @@ packages:
 
   /postcss@8.4.25:
     resolution: {integrity: sha512-7taJ/8t2av0Z+sQEvNzCkpDynl0tX3uJMCODi6nT3PfASC7dYCWV9aQ+uiCf+KBD4SEFcu+GvJdGdwzQ6OSjCw==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
+  /postcss@8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.6

@@ -352,6 +352,11 @@
       "packageName": "custom-utils",
       "projectFolder": "packages/utils",
       "shouldPublish": false
+    },
+    {
+      "packageName": "rsbuild-react",
+      "projectFolder": "apps/rsbuild-react",
+      "shouldPublish": false
     }
   ]
 }

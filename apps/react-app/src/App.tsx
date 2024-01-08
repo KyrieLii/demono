@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 
@@ -7,6 +8,13 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="https://lf3-static.bytednsdoc.com/obj/eden-cn/upspbovhj/edenx-ico.ico"
+        />
+      </Helmet>
       <div className="flex">
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />

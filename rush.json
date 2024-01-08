@@ -357,6 +357,11 @@
       "packageName": "rsbuild-react",
       "projectFolder": "apps/rsbuild-react",
       "shouldPublish": false
+    },
+    {
+      "packageName": "nodejs-error",
+      "projectFolder": "packages/nodejs-error",
+      "shouldPublish": false
     }
   ]
 }

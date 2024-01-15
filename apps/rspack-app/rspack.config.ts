@@ -9,6 +9,9 @@ const config: RspackOptions = {
   entry: {
     main: "./src/main.tsx",
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
+  },
 
   plugins: [
     new rspack.DefinePlugin({
